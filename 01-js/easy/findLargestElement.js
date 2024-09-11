@@ -6,7 +6,11 @@
 */
 
 function findLargestElement(numbers) {
-    
+    let curr = numbers[0];
+ let largest = numbers.reduce((accum,comb)=>{
+     return Math.max(accum,comb);
+ },curr)
+ return largest;
 }
-
-module.exports = findLargestElement;
+let array = [5,14,12,18,78];
+console.log(findLargestElement(array));
